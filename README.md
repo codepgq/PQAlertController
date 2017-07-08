@@ -5,6 +5,7 @@
 2 支持链式调用
 3 可以实时监听textField输入回调
 
+```
  UIAlertControllerStyle type = _selectIndex ?UIAlertControllerStyleActionSheet : UIAlertControllerStyleAlert;
     PQAlertController *alert= [PQAlertController alertControllerWithTitle:@"难道我这么帅" message:@"帅，不存在的！" preferredStyle:type];
 #if 0
@@ -35,3 +36,4 @@
     });
 #endif
     [self presentViewController:alert animated:YES completion:nil];
+    ```
