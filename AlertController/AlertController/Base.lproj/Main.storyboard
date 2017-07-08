@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xlj-Ve-OJg">
-                                <rect key="frame" x="139" y="111" width="97" height="29"/>
+                                <rect key="frame" x="139" y="50" width="97" height="29"/>
                                 <segments>
                                     <segment title="alert"/>
                                     <segment title="sheet"/>
@@ -39,16 +39,37 @@
                                     <action selector="showAlertController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4jO-jY-j8Q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afa-Pa-jiQ">
+                                <rect key="frame" x="187.5" y="86" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUa-JR-ZQw">
+                                <rect key="frame" x="187" y="93.5" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="afa-Pa-jiQ" firstAttribute="top" secondItem="xlj-Ve-OJg" secondAttribute="bottom" constant="8" id="NXI-WK-9Uq"/>
+                            <constraint firstItem="afa-Pa-jiQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QAr-xD-8Yz"/>
+                            <constraint firstItem="UUa-JR-ZQw" firstAttribute="top" secondItem="afa-Pa-jiQ" secondAttribute="bottom" constant="7.5" id="SXL-Zq-qRH"/>
                             <constraint firstItem="xlj-Ve-OJg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="daa-te-pvr"/>
-                            <constraint firstItem="xlj-Ve-OJg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="91" id="u5O-0T-saU"/>
+                            <constraint firstItem="UUa-JR-ZQw" firstAttribute="centerX" secondItem="afa-Pa-jiQ" secondAttribute="centerX" id="jet-P8-5Bx"/>
+                            <constraint firstItem="xlj-Ve-OJg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="u5O-0T-saU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountLbl" destination="afa-Pa-jiQ" id="CCN-mZ-PYR"/>
+                        <outlet property="pwdLbl" destination="UUa-JR-ZQw" id="h2c-GK-kQG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

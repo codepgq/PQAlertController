@@ -16,7 +16,7 @@
 }
 
 - (NSInteger)nextTagId{
-    return _textFieldTag;
+    return _textFieldTag++;
 }
 
 - (NSString *)getTextfieldKey:(NSInteger)tag{

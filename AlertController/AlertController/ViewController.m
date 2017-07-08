@@ -10,6 +10,8 @@
 #import "Result.h"
 #import "PQAlertController.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *accountLbl;
+@property (weak, nonatomic) IBOutlet UILabel *pwdLbl;
 
 @end
 
@@ -19,11 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
-    
 }
 - (void)normal{
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"牛逼" message:@"💯就是这么强" preferredStyle:UIAlertControllerStyleActionSheet];
@@ -60,8 +57,10 @@
         NSLog(@"don't know");
     }] addTextInput:@"请输入账号" textChange:^(NSString *text,UITextField *textfield) {
         NSLog(@"%@",text);
+        _accountLbl.text = text;
     }] addSecureTextInput:@"请输入密码" textChange:^(NSString *text,UITextField *textfield) {
         NSLog(@"%@",text);
+        _pwdLbl.text = text;
     }] addAction:@"刘辟" actionHandler:^{
         NSLog(@"哈哈哈");
     }];
@@ -72,8 +71,10 @@
         NSLog(@"ok");
     }).addTextInput(@"请输入账户",NO,^(NSString *text,UITextField *textField){
         NSLog(@"%@",text);
+        _accountLbl.text = text;
     }).addTextInput(@"请输入密码",YES,^(NSString *text,UITextField *textField){
         NSLog(@"%@",text);
+        _pwdLbl.text = text;
     });
 #endif
     [self presentViewController:alert animated:YES completion:nil];
